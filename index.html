@@ -27,8 +27,8 @@ body{
   padding:26px 20px;
   box-shadow:0 14px 40px rgba(62,52,35,.08);
 }
-.logo{text-align:center;font-size:29px}
-.brand{text-align:center;color:var(--sage);font-weight:700;letter-spacing:.12em;font-size:14px}
+.logo{text-align:center;margin-bottom:8px}.logo img{width:118px;height:118px;object-fit:contain;border-radius:50%;box-shadow:0 8px 24px rgba(46,93,73,.10)}
+.brand{text-align:center;color:#1f6f62;font-weight:800;letter-spacing:.12em;font-size:14px}
 h1{font-size:28px;line-height:1.5;text-align:center;margin:10px 0 12px}
 .lead{text-align:center;line-height:1.9;color:var(--muted);margin:0 0 18px}
 .kicker{
@@ -37,7 +37,7 @@ h1{font-size:28px;line-height:1.5;text-align:center;margin:10px 0 12px}
 }
 .center{text-align:center}
 .progress{height:7px;background:#eee9df;border-radius:999px;overflow:hidden;margin:18px 0 22px}
-.bar{height:100%;background:linear-gradient(90deg,#6e7d64,#b59a65);transition:width .25s}
+.bar{height:100%;background:linear-gradient(90deg,#1f8a78,#95c93d);transition:width .25s}
 .question{font-size:21px;line-height:1.55;font-weight:700;margin:8px 0 16px}
 .choice{
   width:100%;display:block;padding:15px 14px;margin:10px 0;background:#fff;
@@ -46,7 +46,7 @@ h1{font-size:28px;line-height:1.5;text-align:center;margin:10px 0 12px}
 }
 .choice:hover{background:#faf6ed;border-color:var(--gold)}
 .primary{
-  width:100%;border:0;border-radius:16px;background:var(--sage);color:white;
+  width:100%;border:0;border-radius:16px;background:linear-gradient(135deg,#1f8a78,#75a92d);color:white;
   padding:16px;font-size:16px;font-weight:700;cursor:pointer
 }
 .secondary{
@@ -173,7 +173,7 @@ const app=document.getElementById("app");
 
 function home(){
   app.innerHTML=`
-    <div class="logo">🌿</div>
+    <div class="logo"><img src="washin-logo.png" alt="和心ロゴ"></div>
     <div class="brand">命をつなぐお茶の学校「和心」</div>
     <h1>60秒でわかる<br>あなたに合う「和心」診断</h1>
     <p class="lead">心と体の健康、これからの人生、そして学び。<br>
@@ -219,7 +219,7 @@ function showResult(){
   const p=products[key], alt=products[altKey];
   const pct=Math.round(ranking[0][1]/Math.max(1,ranking.reduce((s,x)=>s+x[1],0))*100);
   app.innerHTML=`
-    <div class="logo">🌿</div>
+    <div class="logo"><img src="washin-logo.png" alt="和心ロゴ"></div>
     <div class="brand">診断結果</div>
     <div class="center" style="margin-top:8px"><span class="badge">${p.tag}</span></div>
     <h2 class="result-title">${p.name}</h2>
